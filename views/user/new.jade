@@ -1,0 +1,22 @@
+extends ../layout
+block content
+  form#sign-up-form.form-signin(action="/user/create" method="POST")
+    h2.form-signin-heading Create an account
+    - var hasFlash = (flash && flash.err)
+    if hasFlash      
+      - var flashErrors = _.map(Object.keys(flash.err), function(error) {
+      -   return '<li>' + JSON.stringify(flash.err[error]) + '</li>';
+      - });
+    if flashErrors
+      ul.alert.alert-success !{flashErrors}    
+    .control-group
+      input.form-control(type="text" placeholder="your name" name="name")
+    .control-group
+      input.form-control(type="text" placeholder="email address" name="email")
+    .control-group
+      input.form-control(type="text" placeholder="password" name="password" id="password")
+    .control-group
+      input.form-control(type="text" placeholder="password confirmation" name="confirmation")
+    .control-group
+      input.btn.btn-lg.btn-primary.btn-block(type="submit" value="Create Account")
+      input(type="hidden" name="_csrf" value="<%= _csrf %>")

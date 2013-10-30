@@ -1,0 +1,35 @@
+!!! 5
+html(lang='en')
+  head
+    title 
+      = title
+
+    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
+    // STYLES
+    link(rel="stylesheet", href="/linker/styles/bootstrap.css")
+    link(rel="stylesheet", href="/linker/styles/custom.css")
+    // STYLES END
+  body
+    nav.navbar.navbar-inverse.navbar-fixed-top
+      .container
+        a.navbar-brand(href="/") Activity Overlord
+    block content
+
+    .navbar.navbar-default.navbar-fixed-bottom
+      .container
+        p.navbar-text.pull-left
+          &copy; Kristian Mandrup
+        a.navbar-btn.btn.btn-danger.pull-right(href="http://youtube.com") Subscribe on Youtube
+      
+
+    // SCRIPTS
+    script(type="text/javascript", src="/linker/js/socket.io.js")
+    script(type="text/javascript", src="/linker/js/sails.io.js")
+    script(type="text/javascript", src="/linker/js/app.js")
+    script(type="text/javascript", src="/linker/js/jquery.js")
+    script(type="text/javascript", src="/linker/js/bootstrap.js")
+    script(type="text/javascript", src="/linker/js/csrf.js")
+    script(type="text/javascript", src="/linker/js/customValidate.js")
+    script(type="text/javascript", src="/linker/js/jquery.validate.min.js")
+    script(type="text/javascript", src="/linker/js/underscore.js")
+    // SCRIPTS END  
