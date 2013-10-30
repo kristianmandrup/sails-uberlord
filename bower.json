@@ -1,0 +1,13 @@
+{
+  "name": "my-activityOverlord",
+  "version": "0.0.0",
+  "main": "app.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "dependencies": {
+    "angular": "~1.2.0-rc.3"
+  }  
+}

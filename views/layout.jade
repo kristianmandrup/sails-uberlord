@@ -9,7 +9,7 @@ html(lang='en')
     link(rel="stylesheet", href="/linker/styles/bootstrap.css")
     link(rel="stylesheet", href="/linker/styles/custom.css")
     // STYLES END
-  body
+  body(ng-app="uberlord")
     nav.navbar.navbar-inverse.navbar-fixed-top
       .container
         a.navbar-brand(href="/") Activity Overlord
@@ -27,9 +27,11 @@ html(lang='en')
     script(type="text/javascript", src="/linker/js/sails.io.js")
     script(type="text/javascript", src="/linker/js/app.js")
     script(type="text/javascript", src="/linker/js/jquery.js")
+    script(type="text/javascript", src="/linker/js/angular.min.js")
+    script(type="text/javascript", src="/linker/js/angular-bacon.js")
+    script(type="text/javascript", src="/linker/js/bacon-form-validation.js")
+    script(type="text/javascript", src="/linker/js/bacon.min.js")
     script(type="text/javascript", src="/linker/js/bootstrap.js")
     script(type="text/javascript", src="/linker/js/csrf.js")
-    script(type="text/javascript", src="/linker/js/customValidate.js")
-    script(type="text/javascript", src="/linker/js/jquery.validate.min.js")
     script(type="text/javascript", src="/linker/js/underscore.js")
     // SCRIPTS END  

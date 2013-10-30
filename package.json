@@ -9,6 +9,7 @@
         "sails-disk": "~0.9.0",
         "ejs": "0.8.4",
         "jade": "latest",
+        "bacon": "latest",
         "optimist": "0.3.4"
     },
     "scripts": {
