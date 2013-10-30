@@ -1,15 +1,36 @@
-module.exports =
+var bcrypt = require('bcrypt')
+  , SALT_WORK_FACTOR = 10
+  , MIN_PASSWORD_LENGTH = 8;
+
+var createUser = (hash) ->
+  User.create(
+    username:           req.param('username'),
+    email:              req.param('email'),
+    encryptedPassword:  hash
+  ).done(
+    (err,user) ->
+      if (err) throw err;
+        res.json(user);
+  );
+
+var UserController = {
   _config: {}
-  'new': (req, res) ->
-    res.view()
+  create: (req,res) ->
+    try {
+      if not req.param('password') || req.param('password').length < MIN_PASSWORD_LENGTH
+        throw new Error "password not sent or doesn't meet length requirement " + MIN_PASSWORD_LENGTH + " chars)"
+      }
 
-  'create': (req, res, next) ->
-    User.create req.params.all(), (err, user) ->
-      if err
-        console.log("ERROR", err)
-        req.session.flash =
-          err: err
+      bcrypt.hash(req.param('password'),SALT_WORK_FACTOR, (err, hash) ->
+        if err throw err;
+        
+        createUser(hash);
+      );
 
-        res.redirect('user/new')
-      
-      res.json(user)
+    } catch (e) {
+      res.json({error: e.message}, 500);
+    }
+  }
+};
+
+module.exports = UserController;

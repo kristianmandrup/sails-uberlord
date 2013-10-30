@@ -13,3 +13,10 @@ This version of the app will make the following changes and additions:
   - server side (Socket.IO and Ajax)
   - client side (better two-way binding via Bacon Properties)
 
+Inspired by (and mixing ideas from):
+
+- https://github.com/irlnathan/activityoverlord
+- https://github.com/levid/angular-sails-socketio-mongo-demo
+- https://github.com/ragulka/sails-starter-app
+- https://github.com/lauripiispanen/angular-bacon/blob/master/examples/
+- https://github.com/DeTeam/baconjs-chat

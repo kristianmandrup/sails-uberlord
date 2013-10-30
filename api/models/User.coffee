@@ -1,7 +1,7 @@
 module.exports =
   schema: true
   attributes: 	    
-    name:
+    username:
       type:             'STRING'
       required:         true
 
@@ -11,4 +11,9 @@ module.exports =
       unique:           true
 
     birthDate:          'DATE'
-    encryptedPassword:  'STRING'
+    encryptedPassword:  
+      type:             'STRING'
+      required:         true
+      index:
+        unique:         true
+
