@@ -1,5 +1,7 @@
 # Sails Überlord
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/kristianmandrup/sails-uberlord.svg)](https://greenkeeper.io/)
+
 ## a Sails application
 
 This is a remake of the *activityOverlord* app, as demonstrated in *Sailscasts* by _Irl Nathan_
